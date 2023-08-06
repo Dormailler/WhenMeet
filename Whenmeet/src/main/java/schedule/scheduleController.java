@@ -674,7 +674,7 @@ public class scheduleController {
 			ddayMap.put("group_id", groupId);
 			scheduleService.insertGroupDday(ddayMap);
 		}
-		else if (scheduleService.selectGroupDday(groupId) != null) {
+		else if ((scheduleService.selectGroupDday(groupId).getDday()+"").equals("")) {
 			
 			HashMap<String, Object> Dmap = new HashMap<String, Object>();
 			SimpleDateFormat Dformat = new SimpleDateFormat("yyyy년 MM월 dd일 (E)");
